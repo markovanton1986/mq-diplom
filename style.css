@@ -702,3 +702,133 @@ ul {
   font-size: 12px;
   color: #999999;
 }
+
+
+.popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popup-container {
+    position: relative;
+    margin: auto;
+    padding: 50px 30px;
+    background-color: #ffffff;
+}
+
+.feedback-row:nth-child(n+2) {
+    margin-top: 30px;
+}
+
+.feedback-hint {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.feedback-field {
+    width: 100%;
+    border: none;
+    padding: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 13px;
+    background-color: #f4f7f6;
+    background-image: url("../svg/form-arrows.svg");
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: right 13px center;
+    border-radius: 0;
+}
+
+.feedback-field:focus {
+    outline: none;
+    border-bottom: 1px solid #b59f5b;
+  }
+
+.feedback-radio-hint {
+    margin-right: 13px;
+    font-size: 13px;
+}
+
+.feedback-radio-hint::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    background-image: url("../svg/form-empty-circle.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 18px;
+    vertical-align: middle;
+}
+
+.feedback-radio:checked ~ .feedback-radio-hint::before {
+    background-image: url("../svg/form-circle.svg")
+}
+
+.feedback-textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 132px;
+    max-height: 200px;
+    border: none;
+    padding: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 13px;
+    background-color: #f4f7f6;
+    resize: none;
+}
+
+.feedback-textarea:focus {
+    outline: none;
+    border-bottom: 1px solid #b59f5b;
+  }
+
+.feedback-button {
+    width: 100%;
+    height: 48px;
+    border: 0;
+    background-color: #b59f5b;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.feedback-button:hover {
+    background-color: #323232;
+}
+
+.feedback-close {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    border: none;
+    width: 19px;
+    height: 19px;
+    background-color: transparent;
+    background-image: url("../svg/form-x.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 19px;
+    text-indent: -9999px;
+}
+
+._hidden {
+    display: none;
+}
